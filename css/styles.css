@@ -610,7 +610,7 @@ input[type='checkbox'] {
 .navbar-custom .navbar-brand.logo-text {
 	margin-top: 0.25rem;
 	margin-bottom: 0.25rem;
-	font: 700 2.25rem/1.5rem "Montserrat", sans-serif;
+	font: 700 1.5rem/1rem "Montserrat", sans-serif;
 	color: #fff;
 	text-decoration: none;
 }
@@ -736,6 +736,7 @@ input[type='checkbox'] {
 .header h1 {
 	margin-bottom: 0.5rem;
 	color: #fff;
+	font-size: 2rem;
 }
 
 .header .p-large {
@@ -913,6 +914,7 @@ a:hover.back-to-top {
 /*****************************/
 /*      9. Media Queries     */
 /*****************************/	
+
 /* Min-width width 768px */
 @media (min-width: 768px) {
 	
@@ -1179,4 +1181,4 @@ a:hover.back-to-top {
 	}
 	/* end of navigation */
 }
-/* end of min-width width 1200px */
+/* end of min-width width 1600px */
