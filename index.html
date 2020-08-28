@@ -68,6 +68,9 @@
                     <a class="nav-link page-scroll" href="#intro">INTRO</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#menu">MENU</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link page-scroll" href="#contact">CONTACT</a>
                 </li>
             </ul>
@@ -130,6 +133,268 @@
         </div> <!-- end of container -->
     </div> <!-- end of basic-1 -->
     <!-- end of intro -->
+
+    <!-- Menu -->
+    <div id="menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-container">
+                        <div class="section-title">MENU</div>
+                        <h2 class="menu-section">Delivery</h2>
+                    </div>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name"> 50 Chocolate Chip Cookies </h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $15 </h3>
+                    <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                    <button
+                    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                    id="checkout-button-price_1HLAYEIv1E36hF5dAUBAkF0Z"
+                    role="link"
+                    type="button"
+                    >
+                    Checkout
+                    </button>
+
+                    <div id="error-message"></div>
+
+                    <script>
+                    (function() {
+                    var stripe = Stripe('pk_test_51H2i8FIv1E36hF5dYkLQXLAuulRSOyAF5Ty1RYGzbZbiWx0GqSCMNAHsBJlT0BwijQGeaMMa2JG8TCA0BO3CDkK100iFOQJHeH');
+
+                    var checkoutButton = document.getElementById('checkout-button-price_1HLAYEIv1E36hF5dAUBAkF0Z');
+                    checkoutButton.addEventListener('click', function () {
+                        // When the customer clicks on the button, redirect
+                        // them to Checkout.
+                        stripe.redirectToCheckout({
+                        lineItems: [{price: 'price_1HLAYEIv1E36hF5dAUBAkF0Z', quantity: 1}],
+                        mode: 'payment',
+                        // Do not rely on the redirect to the successUrl for fulfilling
+                        // purchases, customers may not always reach the success_url after
+                        // a successful payment.
+                        // Instead use one of the strategies described in
+                        // https://stripe.com/docs/payments/checkout/fulfillment
+                        successUrl: 'https://your-website.com/success',
+                        cancelUrl: 'https://your-website.com/canceled',
+                        })
+                        .then(function (result) {
+                        if (result.error) {
+                            // If `redirectToCheckout` fails due to a browser or network
+                            // error, display the localized error message to your customer.
+                            var displayError = document.getElementById('error-message');
+                            displayError.textContent = result.error.message;
+                        }
+                        });
+                    });
+                    })();
+                    </script>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name"> Rainbow Cookies for a Batch </h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $25 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name"> Dog Treats </h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $15 </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-container">
+                        <h2 class="menu-section">Breakfast</h2>
+                    </div>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Pancakes (3 Stack) </h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $2 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Eggs (any style)</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $4 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Waffles (3 stack)</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $2 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Bacon Strips</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $1 </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-container">
+                        <h2 class="menu-section">Lunch</h2>
+                    </div>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Hot Dogs (2)</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $3 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Hamburgers</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $6 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Cheeseburgers</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $7 </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-container">
+                        <h2 class="menu-section">Dinner</h2>
+                    </div>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Zucchinni Pie</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $9 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Macaroni pie 10x15</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $15 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Breaded chicken</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $12 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Meatballs 15 pieces</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $13 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Mac & cheese full 10x15 pan (Baked)</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $15 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Steak</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $14 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Grilled cheese with homemade fries</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $9 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Chicken Parmesan 10 pieces</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $15 </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-container">
+                        <h2 class="menu-section">Snacks</h2>
+                    </div>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Fresh strawberry smoothies</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $6 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Fresh vegan strawberry smoothies made with almond milk</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $6 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Hot Wings (10 Pieces)</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $13 </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-container">
+                        <h2 class="menu-section">Pet Treats</h2>
+                    </div>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Dog Treats</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $5 </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-container">
+                        <h2 class="menu-section">Desserts</h2>
+                    </div>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Brownies 1 tray</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $9 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">50 Chocolate chip cookies</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $15 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Rainbow cookies for a batch</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $25 </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-container">
+                        <h2 class="menu-section">Side Dishes</h2>
+                    </div>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">French Fries (Waffles, Regular, Shoe String)</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $9 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Onion Rings</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $9 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Side of Steamed Vegetables</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $2 </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-container">
+                        <h2 class="menu-section">Ice Cold Cakes</h2>
+                    </div>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Ice Cream Cake 9x13</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $14 </h3>
+                </div>
+                <div class="col-lg-12 menu-item">
+                    <h4 class="menu-item-name">Cheese Cake</h4>
+                    <span class="separator"></span>
+                    <h3 class="price"> $11 </h3>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact -->
     <div id="contact" class="form-2">
@@ -203,6 +468,7 @@
     
     	
     <!-- Scripts -->
+    <script src="https://js.stripe.com/v3/"></script> <!-- Stripe API-->
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
