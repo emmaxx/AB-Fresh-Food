@@ -375,6 +375,16 @@
         </div>
     </div>
 
+    <div id="map">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="map"></div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Contact -->
     <div id="contact" class="form-2">
         <div class="container">
@@ -457,5 +467,22 @@
     <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
     <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script> 
+        function initMap() {
+          var test= {lat: 40.949102, lng: -73.067318}; 
+          var map = new google.maps.Map(document.getElementById('map'), { 
+            zoom: 4, 
+            center: test 
+          }); 
+          var marker = new google.maps.Marker({ 
+            position: test, 
+            map: map 
+          }); 
+        } 
+      </script> 
+      <script async defer 
+      src= 
+  "https://maps.googleapis.com/maps/api/js?key=AIzaSyBxewqsx1p_ZuDNaSdygge1fP3dhdimdRU&callback=initMap"> 
+      </script> 
 </body>
 </html>
