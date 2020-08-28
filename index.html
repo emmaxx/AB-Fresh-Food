@@ -44,6 +44,27 @@
     </div>
     <!-- end of preloader -->
 
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Modal body text goes here.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
         <!-- Text Logo -->
@@ -148,48 +169,6 @@
                     <h4 class="menu-item-name"> 50 Chocolate Chip Cookies </h4>
                     <span class="separator"></span>
                     <h3 class="price"> $15 </h3>
-                    <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-                    <button
-                    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-                    id="checkout-button-price_1HLAYEIv1E36hF5dAUBAkF0Z"
-                    role="link"
-                    type="button"
-                    >
-                    Checkout
-                    </button>
-
-                    <div id="error-message"></div>
-
-                    <script>
-                    (function() {
-                    var stripe = Stripe('pk_test_51H2i8FIv1E36hF5dYkLQXLAuulRSOyAF5Ty1RYGzbZbiWx0GqSCMNAHsBJlT0BwijQGeaMMa2JG8TCA0BO3CDkK100iFOQJHeH');
-
-                    var checkoutButton = document.getElementById('checkout-button-price_1HLAYEIv1E36hF5dAUBAkF0Z');
-                    checkoutButton.addEventListener('click', function () {
-                        // When the customer clicks on the button, redirect
-                        // them to Checkout.
-                        stripe.redirectToCheckout({
-                        lineItems: [{price: 'price_1HLAYEIv1E36hF5dAUBAkF0Z', quantity: 1}],
-                        mode: 'payment',
-                        // Do not rely on the redirect to the successUrl for fulfilling
-                        // purchases, customers may not always reach the success_url after
-                        // a successful payment.
-                        // Instead use one of the strategies described in
-                        // https://stripe.com/docs/payments/checkout/fulfillment
-                        successUrl: 'https://your-website.com/success',
-                        cancelUrl: 'https://your-website.com/canceled',
-                        })
-                        .then(function (result) {
-                        if (result.error) {
-                            // If `redirectToCheckout` fails due to a browser or network
-                            // error, display the localized error message to your customer.
-                            var displayError = document.getElementById('error-message');
-                            displayError.textContent = result.error.message;
-                        }
-                        });
-                    });
-                    })();
-                    </script>
                 </div>
                 <div class="col-lg-12 menu-item">
                     <h4 class="menu-item-name"> Rainbow Cookies for a Batch </h4>
