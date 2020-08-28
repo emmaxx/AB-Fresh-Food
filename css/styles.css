@@ -74,7 +74,7 @@ a:hover {
 }
 
 a.green {
-	color: #14bf98;
+	color: #BF0010;
 }
 
 a.white,
@@ -87,16 +87,16 @@ strong {
 }
 
 .section-title {
-	color: #14bf98;
+	color: #BF0010;
 	font: 500 0.8125rem/1.125rem "Montserrat", sans-serif;
 }
 
 .btn-solid-reg {
 	display: inline-block;
 	padding: 1.1875rem 1.875rem 1.1875rem 1.875rem;
-	border: 0.125rem solid #14bf98;
+	border: 0.125rem solid #BF0010;
 	border-radius: 0.25rem;
-	background-color: #14bf98;
+	background-color: #BF0010;
 	color: #fff;
 	font: 700 0.75rem/0 "Montserrat", sans-serif;
 	text-decoration: none;
@@ -105,16 +105,16 @@ strong {
 
 .btn-solid-reg:hover {
 	background-color: transparent;
-	color: #14bf98;
+	color: #BF0010;
 	text-decoration: none;
 }
 
 .btn-solid-lg {
 	display: inline-block;
 	padding: 1.375rem 2.125rem 1.375rem 2.125rem;
-	border: 0.125rem solid #14bf98;
+	border: 0.125rem solid #BF0010;
 	border-radius: 0.25rem;
-	background-color: #14bf98;
+	background-color: #BF0010;
 	color: #fff;
 	font: 700 0.75rem/0 "Montserrat", sans-serif;
 	text-decoration: none;
@@ -123,7 +123,7 @@ strong {
 
 .btn-solid-lg:hover {
 	background-color: transparent;
-	color: #14bf98;
+	color: #BF0010;
 	text-decoration: none;
 }
 
@@ -324,9 +324,9 @@ input[type='checkbox'] {
 	display: inline-block;
 	width: 100%;
 	height: 3.125rem;
-	border: 0.125rem solid #14bf98;
+	border: 0.125rem solid #BF0010;
 	border-radius: 0.25rem;
-	background-color: #14bf98;
+	background-color: #BF0010;
 	color: #fff;
 	font: 700 0.75rem/1.75rem "Montserrat", sans-serif;
 	cursor: pointer;
@@ -335,7 +335,7 @@ input[type='checkbox'] {
 
 .form-control-submit-button:hover {
 	background-color: transparent;
-	color: #14bf98;
+	color: #BF0010;
 }
 
 /* Form Success And Error Message Formatting */
@@ -629,7 +629,7 @@ input[type='checkbox'] {
 
 .navbar-custom .nav-item .nav-link:hover,
 .navbar-custom .nav-item .nav-link.active {
-	color: #14bf98;
+	color: #BF0010;
 }
 
 /* Dropdown Menu */
@@ -674,7 +674,7 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .dropdown-item:hover .item-text {
-	color: #14bf98;
+	color: #BF0010;
 }
 
 .navbar-custom .dropdown-items-divide-hr {
@@ -798,6 +798,38 @@ input[type='checkbox'] {
 /* end of hover animation */
 
 /***********************/
+/*      5.1. Menu      */
+/***********************/
+#menu{
+	padding-bottom:3rem;
+}
+.menu-section{
+	padding: 1rem 0 1rem 0;
+}
+.menu-item {
+	display: flex;
+	align-items: baseline;
+	margin-bottom: 10px;
+}
+.menu-item-name{
+	font-size: 1.3rem;
+}
+#checkout-button{
+	padding: 1rem;
+	margin: 0 .5rem 0 .5rem;
+	background-color: #BF0010;
+	color: white;
+}
+  .menu-item > * {
+	padding: 0 1rem 0 1rem;
+	margin: 0;
+  }
+span.separator {
+	flex: 1;
+	border-bottom: 2px dotted #333;
+}
+
+/***********************/
 /*      6. Contact     */
 /***********************/
 .form-2 {
@@ -828,7 +860,7 @@ input[type='checkbox'] {
 .form-2 .list-unstyled .fab {
 	margin-right: 0.5rem;
 	font-size: 0.875rem;
-	color: #14bf98;
+	color: #BF0010;
 }
 
 .form-2 .list-unstyled .fa-phone {
@@ -869,7 +901,7 @@ input[type='checkbox'] {
 }
 
 .form-2 .fa-stack:hover .fa-stack-1x {
-	color: #14bf98;
+	color: #BF0010;
 }
 
 
@@ -902,7 +934,7 @@ a.back-to-top {
 	width: 2.625rem;
 	height: 2.625rem;
 	border-radius: 1.875rem;
-	background: #14bf98 url("../images/up-arrow.png") no-repeat center 47%;
+	background: #BF0010 url("../images/up-arrow.png") no-repeat center 47%;
 	background-size: 1.125rem 1.125rem;
 	text-indent: -9999px;
 }
@@ -949,7 +981,8 @@ a:hover.back-to-top {
 	
 	.navbar-custom .nav-item .nav-link:hover,
 	.navbar-custom .nav-item .nav-link.active {
-		color: #14bf98;
+		color: #BF0010;
+		box-shadow: white;
 	}
 
 	.navbar-custom.top-nav-collapse {
@@ -968,7 +1001,7 @@ a:hover.back-to-top {
 	
 	.navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
 	.navbar-custom.top-nav-collapse .nav-item .nav-link.active {
-		color: #14bf98;
+		color: #BF0010;
 	}
 
 	.navbar-custom .dropdown-menu {
@@ -1074,7 +1107,7 @@ a:hover.back-to-top {
 	}
 
 	.navbar-custom .fa-stack:hover .fa-stack-1x {
-		color: #14bf98;
+		color: #BF0010;
 	}
 	/* end of navigation */
 
